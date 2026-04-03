@@ -68,29 +68,23 @@ function showScreen(targetId) {
     return;
   }
 
-  // Exit current
+  // Hide current screen
   if (currentScreen) {
-    currentScreen.classList.add('leaving');
     currentScreen.classList.remove('active');
   }
 
-  // Enter target after a short delay
-  setTimeout(function () {
-    if (currentScreen) {
-      currentScreen.classList.remove('leaving');
-    }
-    targetScreen.classList.add('active');
+  // Show target screen
+  targetScreen.classList.add('active');
 
-    // Reload tenor embeds for the new screen
-    reloadTenorEmbeds(targetScreen);
+  // Reload tenor embeds for the new screen
+  reloadTenorEmbeds(targetScreen);
 
-    // If it's the yes screen, burst hearts!
-    if (targetId === 'screen-yes') {
-      setTimeout(burstHearts, 400);
-    }
+  // If it's the yes screen, burst hearts!
+  if (targetId === 'screen-yes') {
+    setTimeout(burstHearts, 400);
+  }
 
-    isTransitioning = false;
-  }, 500);
+  isTransitioning = false;
 }
 
 // ──────────── Tenor Embed Reload ────────────
