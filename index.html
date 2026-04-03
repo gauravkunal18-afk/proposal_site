@@ -4,28 +4,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proposed Her</title>
-
+  <title>For You ❤️ </title>
+  <meta name="description" content="A special question, just for you ❤️" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
-      data-width="100%">
-      <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
-      <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
-    </div>
-    
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-    <h1>Do you love me? 🤗</h1>
-    <p>nvn is all yours</p>
+  <!-- Floating Hearts Background -->
+  <div class="hearts-bg" id="hearts-bg"></div>
 
-    <div class="btn">
-      <a href="yes.html">Yes</a>
-      <a href="no1.html">No</a>
+  <!-- Sparkle overlay -->
+  <div class="sparkle-overlay" id="sparkle-overlay"></div>
+
+  <!-- ==================== SCREEN 0: INTRO ==================== -->
+  <div class="screen active" id="screen-intro">
+    <div class="card glass-card intro-card">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="letter">💌</div>
+        </div>
+      </div>
+      <h1 class="intro-title">I have something to tell you...</h1>
+      <p class="intro-sub">Tap the envelope to open</p>
     </div>
   </div>
+
+  <!-- ==================== SCREEN 1: MAIN QUESTION ==================== -->
+  <div class="screen" id="screen-main">
+    <div class="card glass-card">
+      <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
+          data-width="100%">
+          <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
+          <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+        </div>
+      </div>
+      <h1 class="question-title">Do you love me? 🤗</h1>
+      <p class="question-sub">nvn is all yours</p>
+      <div class="btn-group">
+        <button class="btn btn-yes" id="btn-yes-main" onclick="showScreen('screen-yes')">
+          <span class="btn-icon">💖</span> Yes
+        </button>
+        <button class="btn btn-no" id="btn-no-main" onclick="showScreen('screen-no1')">
+          <span class="btn-icon">😢</span> No
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCREEN NO1 ==================== -->
+  <div class="screen" id="screen-no1">
+    <div class="card glass-card">
+      <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="22050818" data-share-method="host" data-aspect-ratio="1"
+          data-width="100%">
+          <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a>from
+          <a href="https://tenor.com/search/mochi-stickers">Mochi Stickers</a>
+        </div>
+      </div>
+      <h1 class="question-title">Please think again! 🙄</h1>
+      <p class="question-sub">itni jaldi na matt bolo 😥</p>
+      <div class="btn-group">
+        <button class="btn btn-yes" onclick="showScreen('screen-yes')">
+          <span class="btn-icon">💖</span> Yes
+        </button>
+        <button class="btn btn-no" onclick="showScreen('screen-no2')">
+          <span class="btn-icon">😢</span> No
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCREEN NO2 ==================== -->
+  <div class="screen" id="screen-no2">
+    <div class="card glass-card">
+      <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="15195810" data-share-method="host" data-aspect-ratio="1"
+          data-width="100%">
+          <a href="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810">Couple
+            Forgive Me Sticker</a>from
+          <a href="https://tenor.com/search/couple-stickers">Couple Stickers</a>
+        </div>
+      </div>
+      <h1 class="question-title">Ek aur baar Soch lo! 😣</h1>
+      <p class="question-sub">kyu aisa kar rahi ho Pls Maan jao 😣</p>
+      <div class="btn-group">
+        <button class="btn btn-yes" onclick="showScreen('screen-yes')">
+          <span class="btn-icon">💖</span> Yes
+        </button>
+        <button class="btn btn-no" onclick="showScreen('screen-no3')">
+          <span class="btn-icon">😢</span> No
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCREEN NO3 (No button runs away) ==================== -->
+  <div class="screen" id="screen-no3">
+    <div class="card glass-card">
+      <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="15974530976611222074" data-share-method="host"
+          data-aspect-ratio="1.26923" data-width="100%">
+          <a href="https://tenor.com/view/peach-goma-phone-gif-15974530976611222074">Peach Goma Phone Sticker</a>from
+          <a href="https://tenor.com/search/peach+goma-stickers">Peach Goma Stickers</a>
+        </div>
+      </div>
+      <h1 class="question-title">Pls Maan jao na! 😭</h1>
+      <p class="question-sub">Kitna code likhwaogi 😭</p>
+      <div class="btn-group btn-group-no3">
+        <button class="btn btn-yes" onclick="showScreen('screen-yes')">
+          <span class="btn-icon">💖</span> Yes
+        </button>
+        <button class="btn btn-no btn-runaway" id="btn-runaway">
+          <span class="btn-icon">😢</span> No
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCREEN YES ==================== -->
+  <div class="screen" id="screen-yes">
+    <div class="card glass-card yes-card">
+      <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="253027946666209433" data-share-method="host"
+          data-aspect-ratio="1.37853" data-width="100%">
+          <a
+            href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433">Mochi
+            Cat GIF</a>from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
+        </div>
+      </div>
+      <h1 class="yes-title">I knew it! 😘</h1>
+      <p class="yes-sub">You love me a lot!</p>
+      <div class="heart-burst" id="heart-burst"></div>
+    </div>
+  </div>
+
+  <!-- Tenor embed script -->
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
